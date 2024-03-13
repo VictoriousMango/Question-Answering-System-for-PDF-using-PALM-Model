@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering System</title>
+</head>
+<body>
+    <h1>Question Answering System</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf"><br><br>
+        
+    </form>
+    <br>
+    <form action="/ask_question" method="post">
+        <label for="question">Enter your question:</label><br>
+        <input type="text" id="question" name="question"><br><br>
+        <input type="submit" value="Ask Question">
+    </form>
+</body>
+</html>
