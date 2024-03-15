@@ -54,11 +54,10 @@ def upload_file():
 def ask_question():
     if request.method == 'POST':
         question = request.form['question']
-        pdf_path = os.path.join(app.config['UPLOAD_FOLDER'], 'uploaded_file.pdf')
         model_name = "all-MiniLM-L6-v2"
         db = load_vector_storage(model_name)
         answer = answer_question(db, question)
-        return render_template('answer.html', answer=answer)
+        return render_template('index.html', answer=answer)
 
 if __name__ == '__main__':
     app.run(debug=True)

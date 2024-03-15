@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question Answering System Using PDF</title>
+    <style>
+        .answer-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Question Answering System Using PDF</h1>
@@ -13,9 +20,15 @@
     </form>
     <br>
     <form action="/ask_question" method="post">
-        <label for="question">Type your question below</label><br>
+        <label for="question">Type your question below:</label><br>
         <input type="text" id="question" name="question"><br><br>
-        <input type="submit" value="Ask Question">
+        <input type="submit" value="Post your Question">
     </form>
+    {% if answer %}
+    <div class="answer-container">
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+    </div>
+    {% endif %}
 </body>
 </html>
