@@ -3,6 +3,7 @@ from langchain.chains.question_answering import load_qa_chain
 import google.generativeai as palm
 from Vector import load_vector_storage, create_vector_storage
 
+
 # Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()
