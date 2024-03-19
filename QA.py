@@ -20,6 +20,7 @@ def answer_question(db, question):
     # Define the query
     query = question
    
+   
     # Generate the answer
     completion = palm.generate_text(
         model='models/text-bison-001',
