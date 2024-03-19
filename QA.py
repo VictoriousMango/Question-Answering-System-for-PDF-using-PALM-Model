@@ -3,7 +3,6 @@ from langchain.chains.question_answering import load_qa_chain
 import google.generativeai as palm
 from Vector import load_vector_storage, create_vector_storage
 
-
 # Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()
@@ -20,7 +19,17 @@ def answer_question(db, question):
     # Define the query
     query = question
    
-   
+    # Integrate retriever
+    retriever = db.as_retriever()
+    try:
+        docs = retriever.invoke(query)
+        if docs:
+            print("Documents retrieved successfully")
+        else:
+            print("No documents retrieved for the query.")
+    except Exception as e:
+        print("Error occurred while retrieving documents:", e)
+
     # Generate the answer
     completion = palm.generate_text(
         model='models/text-bison-001',
