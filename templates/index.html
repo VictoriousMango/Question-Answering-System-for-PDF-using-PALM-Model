@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question Answering System Using PDF</title>
+    <title>WELCOME TO PDF BOT</title>
     <style>
         .answer-container {
             border: 1px solid #ccc;
             padding: 10px;
             margin-top: 20px;
         }
+
+        /* Container style */
+        .question-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style for the button */
+        input[type="submit"] {
+            align-self: flex-end; /* Align the button to the end (right) */
+        }
     </style>
 </head>
 <body>
-    <h1>Question Answering System Using PDF</h1>
+    <h1>Welcome To Pdf Bot</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept=".pdf"><br><br>
-        
     </form>
     <br>
-    <form action="/ask_question" method="post">
+    <form action="/ask_question" method="post" class="question-form">
         <label for="question">Type your question below:</label><br>
-        <input type="text" id="question" name="question"><br><br>
-        <input type="submit" value="Post your Question">
+        <input type="text" id="question" name="question"><br>
+        <!-- Move the button to the right side -->
+        <input type="submit" value="Post">
     </form>
     {% if answer %}
     <div class="answer-container">
