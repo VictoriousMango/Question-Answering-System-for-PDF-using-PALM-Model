@@ -14,5 +14,5 @@ Supports PDF document loading and text splitting using PyMuPDFLoader and Recursi
 
 Provides a simple interface for querying and retrieving relevant documents and answers.
 
-Install the required dependency
+Install the required dependencies
 Add your Google API Key and FLASK_SECRET_KEY
