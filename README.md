@@ -61,4 +61,5 @@ After submitting the question, you will receive the answer displayed on the same
 - PyMuPDF: For loading and parsing PDF documents.
 - text-bison-001: For text generation and question answering.
 
-- The path to the pdf file gets saved in an uploads folder once the pdf is uploaded.
+
+- **The path to the pdf file gets saved in an uploads folder once the pdf is uploaded.**
