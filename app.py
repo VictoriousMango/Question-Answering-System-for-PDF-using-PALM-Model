@@ -6,6 +6,7 @@ import os
 from Vector import load_vector_storage
 from QA import answer_question
 
+
 app = Flask(__name__)
 
 # Load environment variables from .env file
