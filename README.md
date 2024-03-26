@@ -41,7 +41,7 @@ To run PDF Bot on your local machine, follow these steps:
 Upload PDF files:
 
 - Click on the "Choose File" button and select a PDF file to upload.
-- Once the file is uploaded successfully, you will see a confirmation message.
+- The path of pdf gets saved in an uploads folder once a pdf file is uploaded. 
 
 Ask questions:
 
@@ -62,4 +62,4 @@ After submitting the question, you will receive the answer displayed on the same
 - text-bison-001: For text generation and question answering.
 
 
-- **The path to the pdf file gets saved in an uploads folder once the pdf is uploaded.**
+
